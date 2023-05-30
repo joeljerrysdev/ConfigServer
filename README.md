@@ -5,8 +5,8 @@ Packaging: jar
 Versão Java: 11
 
 # 1 - Configurção para projeto de micro serviço Eureka Server
-Dependencies
-Eureka Server
+  a - Dependencies;
+  b - Eureka Server;
 Spring Web
 Lombok
 Spring Boot DevTools
