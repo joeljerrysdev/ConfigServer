@@ -18,6 +18,10 @@ spring:
             - Path=/course/**
 #            filters:
 #            - name: CourseFilter
+          - id: catalogRoute
+          uri: lb://CATALOG-SERVICE
+          predicates:
+            - Path=/catalog/**
           filters:
             - AddRequestHeader=course-request-header, custom-course-request-header
             - AddResponseHeader=course-response-header, custom-course-response-header
