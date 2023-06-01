@@ -3,25 +3,25 @@ server:
 spring:
   cloud:
     gateway:
-  #    default-filters:
- #       - name: LogFilterCont
       routes:
         - id: subscriptionRoute
           uri: lb://SUBSCRIPTION-SERVICE
           predicates:
             - Path=/subscription/**
-#           filters:
-#            - name: SubscriptionFilter
         - id: courseRoute
           uri: lb://COURSE-SERVICE
           predicates:
             - Path=/course/**
 #            filters:
 #            - name: CourseFilter
-          - id: catalogRoute
+        - id: catalogRoute
           uri: lb://CATALOG-SERVICE
           predicates:
             - Path=/catalog/**
+        - id: MovieRoute
+          uri: lb://movie-service
+          predicates:
+            - Path=/movie/**
           filters:
             - AddRequestHeader=course-request-header, custom-course-request-header
             - AddResponseHeader=course-response-header, custom-course-response-header
