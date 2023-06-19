@@ -24,19 +24,19 @@ server:
 message: Mensagem generica
 
 
-## Resilience4J configs for CircuitBreaker Pattern
-resilience4j:
-  circuitbreaker:
-    instances:
-      movie-service:
-        allowHealthIndicatorToFail: false
-        registerHealthIndicator: true
-        slidingWindowType: COUNT_BASED
-        slidingWindowSize: 5
-        failueRateThreshold: 50
-        waitDurationInOpenState: 50s
-        permittedNumberOfCalssInHalfOpenState: 2
-        automaticTransitionFromOpenToHalfIfOpenEnabled: true
+# ## Resilience4J configs for CircuitBreaker Pattern
+# resilience4j:
+#   circuitbreaker:
+#     instances:
+#       movie-service:
+#         allowHealthIndicatorToFail: false
+#         registerHealthIndicator: true
+#         slidingWindowType: COUNT_BASED
+#         slidingWindowSize: 5
+#         failueRateThreshold: 50
+#         waitDurationInOpenState: 50s
+#         permittedNumberOfCalssInHalfOpenState: 2
+#         automaticTransitionFromOpenToHalfIfOpenEnabled: true
 
 
 
