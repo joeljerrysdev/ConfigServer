@@ -40,18 +40,4 @@ resilience4j:
 
 
 
-  #Configura��o do mecanismo de novas tentativas
-  retry:
-    instances:
-      movie-service:
-        maxAttempts: 3
-        waitDuration: 10s
-        #retryExceptions[0]: feign.FeignExceptions$InternalServerError
-        retryExceptions:
-          - feign.FeignException$ServiceUnavailable
-          - feign.FeignException$InternalServerError
-          - org.springframework.web.client.HttpServerErrorException
-          - java.util.concurrent.TimeoutException
-          - java.io.IOException
-
 
