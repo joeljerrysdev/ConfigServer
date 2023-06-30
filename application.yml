@@ -1,3 +1,11 @@
+spring:
+  zipkin:
+    base-url: http://zipkin-service:9411/
+  rabbitmq:
+    username: guest
+    password: guest
+    host: rabbit-service
+    port: 5672
 eureka:
   client:
     service-url:
@@ -22,6 +30,10 @@ info:
 server:
   port: ${PORT:9999}
 message: Mensagem generica
+
+queue:
+  serie-service: queue-serie-service
+  movie-service: queue-movie-service
 
 
 ## Resilience4J configs for CircuitBreaker Pattern
