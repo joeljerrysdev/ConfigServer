@@ -5,7 +5,7 @@ spring:
     username: guest
     password: guest
     host: rabbit-service
-    port: 5672
+    port: 15672
 eureka:
   client:
     service-url:
